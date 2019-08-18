@@ -5,16 +5,19 @@ var path = require("path");
 module.exports = function (app) {
     // HTML GET Requests
     // Below code handles when users "visits" a page.
-    app.get("/home", function (req, res) {
+   
+    //Home page
+    app.get("/", function (req, res) {
         res.sendFile(path.join(__dirname, "../public/home.html"));
     });
-
+    
+    //Survey Page
     app.get("/survey", function (req, res) {
         res.sendFile(path.join(__dirname, "../public/survey.html"));
     });
 
-    // If no matching route is found default to home
-    app.get("*", function (req, res) {
-        res.sendFile(path.join(__dirname, "../public/home.html"));
+    //css page
+    app.get("/css", function (req, res){
+        res.sendFile(path.join(__dirname, "../public/css/style.css"));
     });
 };

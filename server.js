@@ -1,3 +1,4 @@
+var path = require("path");
 var express = require("express");
 
 // This sets up the basic properties for our express server
@@ -21,5 +22,5 @@ require("./app/routing/htmlRoutes")(app);
 // LISTENER
 // The below code effectively "starts" our server
 app.listen(PORT, function () {
-    console.log("App listening on PORT: " + PORT);
+    console.log("Friend Finder App listening on PORT: " + PORT);
 });
